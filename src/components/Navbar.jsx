@@ -40,6 +40,7 @@ export default function Navbar() {
                 BUILDING THE FUTURE
               </span>
             </div>
+            <span className="logo-mobile-name">SKV Productions</span>
           </Link>
 
           <nav className="nav-capsule">
