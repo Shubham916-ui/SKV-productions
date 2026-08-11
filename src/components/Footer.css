@@ -37,7 +37,23 @@
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
+}
+
+.footer-logo-signature {
+  font-family: 'Caveat', cursive;
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transition: opacity 0.25s ease;
+}
+
+.footer-logo-signature:hover {
+  opacity: 0.88;
 }
 
 .footer-brand-desc {

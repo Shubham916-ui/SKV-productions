@@ -16,15 +16,8 @@ export default function Footer() {
           <div className="footer-card-inner">
             {/* Brand Left */}
             <div className="footer-brand">
-              <Link to="/" className="footer-logo">
-                <span className="logo-brand-mark">SKV</span>
-                <span className="logo-v-divider" />
-                <div className="logo-text-block">
-                  <span className="logo-title">SKV PRODUCTIONS</span>
-                  <span className="logo-tagline">
-                    BUILDING THE FUTURE
-                  </span>
-                </div>
+              <Link to="/" className="footer-logo-signature">
+                SKV Productions
               </Link>
               <p className="footer-brand-desc">
                 Crafting digital experiences that make your brand impossible to ignore. Every pixel has a purpose, every interaction tells a story.
