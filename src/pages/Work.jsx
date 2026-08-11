@@ -6,6 +6,19 @@ import { IconMapPin } from "../components/Icons";
 
 const projects = [
   {
+    id: 1,
+    title: "EduNexus — Gamified Learning Quest",
+    type: "EdTech",
+    desc: "Interactive gamified learning platform transforming Class 6–10 school curriculum into legendary quests. Features expert lessons, timed boss quizzes, XP progression system, and real-time Math Duel battles.",
+    tags: ["React", "Vite", "Gamification", "EdTech", "Web App"],
+    color: "rgba(147,51,234,0.2)",
+    accentColor: "#a855f7",
+    liveUrl: "https://edu-nexus-v2-frontend-5zzz.vercel.app/",
+    isReal: true,
+    location: "India",
+    image: "/edunexus.png",
+  },
+  {
     id: 0,
     title: "Shree Shyam Polymers",
     type: "Manufacturing",
@@ -33,7 +46,7 @@ const projects = [
   },
 ];
 
-const filters = ["All", "Manufacturing", "Portfolio"];
+const filters = ["All", "EdTech", "Manufacturing", "Portfolio"];
 
 export default function Work() {
   const [active, setActive] = useState("All");
@@ -69,8 +82,8 @@ export default function Work() {
               <div key={p.id} className={`work-card glass reveal hover-lift${p.isReal ? " real-project" : ""}`}>
                 {/* Real client badge */}
                 {p.isReal && (
-                  <div className="real-badge">
-                    <span className="real-dot" />
+                  <div className="real-badge" style={p.accentColor ? { color: p.accentColor, borderColor: `${p.accentColor}44`, background: `${p.accentColor}18` } : {}}>
+                    <span className="real-dot" style={p.accentColor ? { background: p.accentColor } : {}} />
                     Live Client Project
                   </div>
                 )}
@@ -98,8 +111,8 @@ export default function Work() {
                   <div className="tags">{p.tags.map(t=><span key={t} className="tag tag-dark">{t}</span>)}</div>
                   {/* Live site link for real projects */}
                   {p.liveUrl && (
-                    <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="live-link">
-                      <span className="live-link-dot" />
+                    <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="live-link" style={p.accentColor ? { color: p.accentColor, borderColor: `${p.accentColor}44`, background: `${p.accentColor}14` } : {}}>
+                      <span className="live-link-dot" style={p.accentColor ? { background: p.accentColor } : {}} />
                       Visit Live Site ↗
                     </a>
                   )}
