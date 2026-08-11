@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -29,8 +29,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
-        <div className="nav-inner">
+      <header className={`navbar-wrapper${scrolled ? " scrolled" : ""}`}>
+        <nav className="nav-capsule">
           <Link to="/" className="nav-logo" onClick={closeMenu}>
             <span className="logo-skv">SKV</span>
             <span className="logo-prod">Productions</span>
@@ -43,7 +43,7 @@ export default function Navbar() {
                   to={item.to}
                   end={item.end}
                   className={({ isActive }) =>
-                    "nav-link" + (isActive ? " active" : "")
+                    "nav-pill" + (isActive ? " active" : "")
                   }
                 >
                   {item.label}
@@ -52,9 +52,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <Link to="/contact" className="nav-cta" onClick={closeMenu}>
-            Start a Project
-          </Link>
+          <div className="nav-right">
+            <span className="nav-divider" />
+            <Link to="/contact" className="nav-cta-pill" onClick={closeMenu}>
+              Start a Project
+            </Link>
+          </div>
 
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
@@ -63,8 +66,8 @@ export default function Navbar() {
           >
             <span /><span /><span />
           </button>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Mobile Menu */}
       <div className={`mobile-overlay${menuOpen ? " open" : ""}`}>
