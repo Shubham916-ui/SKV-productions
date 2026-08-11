@@ -93,21 +93,27 @@ export default function Home() {
         </div>
 
         <div className="hero-visual">
-          <div className="hero-card glass">
-            <div className="card-dots">
-              <span className="d r" /><span className="d y" /><span className="d g" />
-            </div>
-            <div className="card-lines">
-              <div className="cl long" /><div className="cl short" />
-              <div className="card-blocks">
-                <div className="cb b1" /><div className="cb b2" />
+          <div className="hero-code-card glass">
+            <div className="code-header">
+              <div className="card-dots">
+                <span className="d r" /><span className="d y" /><span className="d g" />
               </div>
-              <div className="cl med" /><div className="cl long" />
+              <span className="code-filename">App.jsx — SKV Studio</span>
             </div>
-            <div className="card-label">Live Preview</div>
+            <pre className="code-body">
+              <code>
+                <span className="c-keyword">import</span> &#123; <span className="c-func">createWebsite</span> &#125; <span className="c-keyword">from</span> <span className="c-string">'@skv/studio'</span>;{'\n\n'}
+                <span className="c-comment">// Crafting digital excellence</span>{'\n'}
+                <span className="c-keyword">const</span> <span className="c-var">website</span> = <span className="c-func">createWebsite</span>(&#123;{'\n'}
+                {'  '}<span className="c-prop">client</span>: <span className="c-string">'Your Brand'</span>,{'\n'}
+                {'  '}<span className="c-prop">theme</span>: <span className="c-string">'Glossy Glassmorphic'</span>,{'\n'}
+                {'  '}<span className="c-prop">speed</span>: <span className="c-string">'100/100 Core Vitals'</span>,{'\n'}
+                {'  '}<span className="c-prop">conversion</span>: <span className="c-string">'High Impact'</span>,{'\n'}
+                &#125;);{'\n\n'}
+                <span className="c-var">website</span>.<span className="c-func">deploy</span>(&#123; <span className="c-prop">status</span>: <span className="c-string">'Live'</span> &#125;); <span className="c-cursor">|</span>
+              </code>
+            </pre>
           </div>
-          <div className="fbadge fb1 glass">Premium Design</div>
-          <div className="fbadge fb2 glass">Fast Delivery</div>
         </div>
       </section>
 
