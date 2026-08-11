@@ -135,6 +135,7 @@
 .testi-text { color: var(--text-muted); font-size: 15px; line-height: 1.75; margin-bottom: 24px; font-style: italic; }
 .testi-client { display: flex; align-items: center; gap: 12px; }
 .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--purple-dark), var(--sky)); display: flex; align-items: center; justify-content: center; font-family: "Outfit", sans-serif; font-size: 13px; font-weight: 700; color: white; flex-shrink: 0; }
+.testi-avatar-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; object-position: top; border: 1.5px solid rgba(167,139,250,0.4); flex-shrink: 0; }
 .testi-client strong { display: block; font-family: "Outfit", sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 2px; }
 .testi-client span { color: var(--text-dim); font-size: 12px; }
 

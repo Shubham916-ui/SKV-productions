@@ -216,6 +216,7 @@ export default function Home() {
                 name: "Mayank Aggrawal (CA)",
                 role: "Director, Shree Shyam Polymers Pvt. Ltd.",
                 init: "MA",
+                avatar: "/mayank.png",
                 text: "SKV Productions delivered an outstanding corporate website for Shree Shyam Polymers. Product showcase, inquiry workflow, and performance exceeded our expectations!"
               },
               {
@@ -229,7 +230,11 @@ export default function Home() {
                 <div className="stars">5.0 / 5.0 Rating</div>
                 <p className="testi-text">"{t.text}"</p>
                 <div className="testi-client">
-                  <div className="testi-avatar">{t.init}</div>
+                  {t.avatar ? (
+                    <img src={t.avatar} alt={t.name} className="testi-avatar-img" />
+                  ) : (
+                    <div className="testi-avatar">{t.init}</div>
+                  )}
                   <div><strong>{t.name}</strong><span>{t.role}</span></div>
                 </div>
               </div>
