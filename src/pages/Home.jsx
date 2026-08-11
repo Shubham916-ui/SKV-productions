@@ -49,9 +49,38 @@ function useCounter() {
   }, []);
 }
 
+function use3DTilt() {
+  const cardRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -14;
+    const rotateY = ((x - centerX) / centerX) * 14;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.04, 1.04, 1.04)`;
+    card.style.transition = 'transform 0.08s ease-out';
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    card.style.transition = 'transform 0.5s ease-out';
+  };
+
+  return { cardRef, handleMouseMove, handleMouseLeave };
+}
+
 export default function Home() {
   useReveal();
   useCounter();
+  const { cardRef, handleMouseMove, handleMouseLeave } = use3DTilt();
 
   return (
     <div className="home-page">
@@ -93,7 +122,12 @@ export default function Home() {
         </div>
 
         <div className="hero-visual">
-          <div className="hero-code-card glass">
+          <div
+            ref={cardRef}
+            className="hero-code-card glass"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          >
             <div className="code-header">
               <div className="card-dots">
                 <span className="d r" /><span className="d y" /><span className="d g" />
