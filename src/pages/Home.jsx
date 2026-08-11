@@ -210,6 +210,7 @@ export default function Home() {
                 name: "Harsh",
                 role: "Cinematographer & Video Editor",
                 init: "H",
+                avatar: "/harsh.png",
                 text: "SKV Productions built my portfolio website from scratch. The sleek dark aesthetic and smooth interactive touches captured my creative style perfectly!"
               },
               {
