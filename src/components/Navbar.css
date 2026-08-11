@@ -32,6 +32,13 @@
   flex-shrink: 0;
 }
 
+.logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .logo-brand-mark {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;

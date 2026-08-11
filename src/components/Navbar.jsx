@@ -32,7 +32,7 @@ export default function Navbar() {
       <header className={`navbar-header${scrolled ? " scrolled" : ""}`}>
         <div className="nav-container">
           <Link to="/" className="nav-logo" onClick={closeMenu}>
-            <span className="logo-brand-mark">SKV</span>
+            <img src="/skv-logo.png" alt="SKV Logo" className="logo-img" />
             <span className="logo-v-divider" />
             <div className="logo-text-block">
               <span className="logo-title">SKV PRODUCTIONS</span>
