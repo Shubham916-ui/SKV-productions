@@ -13,7 +13,6 @@ export default function Footer() {
               <div className="logo-text-block">
                 <span className="logo-title">SKV PRODUCTIONS</span>
                 <span className="logo-tagline">
-                  <span className="tagline-dot" />
                   BUILDING THE FUTURE
                 </span>
               </div>
