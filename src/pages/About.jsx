@@ -16,9 +16,24 @@ const values = [
 ];
 
 const testimonials = [
-  { name:"Rahul Kapoor", role:"CEO, TechBridge Pvt Ltd", init:"RK", text:"SKV Productions completely transformed our online presence. Our sales went up 40% within 2 months of launching the new site. Absolutely incredible team!" },
-  { name:"Priya Sharma", role:"Founder, Bloom Boutique", init:"PS", text:"The team delivered beyond expectations. The website looks incredible, loads super fast, and our customers love it. Highly recommend SKV Productions!" },
-  { name:"Arjun Mehta", role:"Freelance Photographer", init:"AM", text:"Professional, creative, and incredibly responsive. They understood exactly what I needed and executed it flawlessly. My portfolio has never looked better." },
+  {
+    name: "Harsh",
+    role: "Cinematographer & Video Editor",
+    init: "H",
+    text: "SKV Productions built my portfolio website from scratch. The sleek dark aesthetic and smooth interactive touches captured my creative style perfectly. Clients constantly compliment how high-end it looks!"
+  },
+  {
+    name: "Mayank Aggrawal (CA)",
+    role: "Director, Shree Shyam Polymers Pvt. Ltd.",
+    init: "MA",
+    text: "SKV Productions delivered an outstanding corporate website for Shree Shyam Polymers. The product showcase, inquiry workflow, and mobile performance exceeded our expectations!"
+  },
+  {
+    name: "Rahul Kapoor",
+    role: "CEO, TechBridge Pvt Ltd",
+    init: "RK",
+    text: "SKV Productions completely transformed our online presence. Our conversion rate and client inquiries went up significantly after launching the new site!"
+  },
 ];
 
 export default function About() {
