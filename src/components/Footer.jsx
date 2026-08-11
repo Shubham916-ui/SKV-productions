@@ -8,8 +8,15 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <span className="logo-skv">SKV</span>
-              <span className="logo-prod">Productions</span>
+              <span className="logo-brand-mark">SKV</span>
+              <span className="logo-v-divider" />
+              <div className="logo-text-block">
+                <span className="logo-title">SKV PRODUCTIONS</span>
+                <span className="logo-tagline">
+                  <span className="tagline-dot" />
+                  BUILDING THE FUTURE
+                </span>
+              </div>
             </Link>
             <p>Crafting digital experiences that make your brand impossible to ignore.</p>
             <div className="footer-socials">
