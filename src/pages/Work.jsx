@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./PageShared.css";
 import "./Work.css";
+import { IconMapPin } from "../components/Icons";
 
 const projects = [
   {
@@ -77,7 +78,7 @@ export default function Work() {
                   <div className="work-type-badge">{p.type}</div>
                   {/* Location for real projects */}
                   {p.location && (
-                    <div className="work-location-badge">📍 {p.location}</div>
+                    <div className="work-location-badge"><IconMapPin size={12} /> {p.location}</div>
                   )}
                   {/* Render Image or Mock UI */}
                   {p.image ? (

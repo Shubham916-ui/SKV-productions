@@ -1,12 +1,19 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./PageShared.css";
+import {
+  IconMessage,
+  IconFigma,
+  IconZap,
+  IconRocket,
+  IconCheck
+} from "../components/Icons";
 
 const steps = [
-  { num:"01", icon:"💬", title:"Discovery Call", desc:"We start with a focused consultation to deeply understand your vision, business goals, target audience, and project scope. No templates — just your unique story.", details:["30-60 min strategy session","Brand & audience analysis","Scope & timeline planning","Custom project roadmap"] },
-  { num:"02", icon:"🎨", title:"Design & Concept", desc:"We craft detailed wireframes and high-fidelity visual mockups in Figma. You review, give feedback, and we refine until every pixel is exactly right.", details:["Wireframes & user flows","High-fidelity Figma mockups","2 rounds of revisions","Mobile-first approach"] },
-  { num:"03", icon:"⚡", title:"Development", desc:"Your approved design is built with clean, optimized code. We ensure blazing-fast load times, SEO best practices, and flawless responsiveness across all devices.", details:["React / Next.js / HTML","Mobile-responsive build","SEO & performance optimization","Cross-browser testing"] },
-  { num:"04", icon:"🚀", title:"Launch & Support", desc:"We deploy your website to a production server, configure your domain, and provide post-launch support to ensure everything runs flawlessly.", details:["Deployment & DNS setup","Post-launch QA testing","1 month free support","Training & handover"] },
+  { num:"01", icon: <IconMessage size={28} />, title:"Discovery Call", desc:"We start with a focused consultation to deeply understand your vision, business goals, target audience, and project scope. No templates — just your unique story.", details:["30-60 min strategy session","Brand & audience analysis","Scope & timeline planning","Custom project roadmap"] },
+  { num:"02", icon: <IconFigma size={28} />, title:"Design & Concept", desc:"We craft detailed wireframes and high-fidelity visual mockups in Figma. You review, give feedback, and we refine until every pixel is exactly right.", details:["Wireframes & user flows","High-fidelity Figma mockups","2 rounds of revisions","Mobile-first approach"] },
+  { num:"03", icon: <IconZap size={28} />, title:"Development", desc:"Your approved design is built with clean, optimized code. We ensure blazing-fast load times, SEO best practices, and flawless responsiveness across all devices.", details:["React / Next.js / HTML","Mobile-responsive build","SEO & performance optimization","Cross-browser testing"] },
+  { num:"04", icon: <IconRocket size={28} />, title:"Launch & Support", desc:"We deploy your website to a production server, configure your domain, and provide post-launch support to ensure everything runs flawlessly.", details:["Deployment & DNS setup","Post-launch QA testing","1 month free support","Training & handover"] },
 ];
 
 export default function Process() {
@@ -39,7 +46,7 @@ export default function Process() {
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                   <ul className="process-details">
-                    {s.details.map(d=><li key={d}>✓ {d}</li>)}
+                    {s.details.map(d=><li key={d}><IconCheck size={14} /> {d}</li>)}
                   </ul>
                 </div>
               </div>

@@ -1,12 +1,18 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./PageShared.css";
+import {
+  IconDiamond,
+  IconZap,
+  IconUsers,
+  IconCompass
+} from "../components/Icons";
 
 const values = [
-  { icon:"💎", title:"Quality First", desc:"We never compromise on quality. Every detail, every pixel, every line of code is crafted with precision." },
-  { icon:"⚡", title:"Speed & Performance", desc:"Fast websites aren't optional. We optimize for Core Web Vitals and sub-2-second load times by default." },
-  { icon:"🤝", title:"Client-Centric", desc:"You are our priority. Clear communication, transparent pricing, and genuine care for your success." },
-  { icon:"🔮", title:"Future-Ready", desc:"We build with tomorrow in mind — scalable, maintainable, and ready for whatever comes next." },
+  { icon: <IconDiamond size={24} />, title:"Quality First", desc:"We never compromise on quality. Every detail, every pixel, every line of code is crafted with precision." },
+  { icon: <IconZap size={24} />, title:"Speed & Performance", desc:"Fast websites aren't optional. We optimize for Core Web Vitals and sub-2-second load times by default." },
+  { icon: <IconUsers size={24} />, title:"Client-Centric", desc:"You are our priority. Clear communication, transparent pricing, and genuine care for your success." },
+  { icon: <IconCompass size={24} />, title:"Future-Ready", desc:"We build with tomorrow in mind — scalable, maintainable, and ready for whatever comes next." },
 ];
 
 const testimonials = [
@@ -81,7 +87,7 @@ export default function About() {
             <div className="testi-grid">
               {testimonials.map((t,i)=>(
                 <div key={i} className="testi-card glass reveal">
-                  <div className="stars">★★★★★</div>
+                  <div className="stars">5.0 / 5.0 Rating</div>
                   <p className="testi-text">"{t.text}"</p>
                   <div className="testi-client">
                     <div className="testi-avatar">{t.init}</div>

@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <p>© 2026 <strong>SKV Productions</strong>. All rights reserved.</p>
-          <p>Made with <span className="heart">♥</span> in India</p>
+          <p>Designed & Developed in India</p>
         </div>
       </div>
     </footer>

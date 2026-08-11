@@ -1,6 +1,12 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import {
+  IconMonitor,
+  IconTarget,
+  IconShoppingBag,
+  IconFigma
+} from "../components/Icons";
 
 function useReveal() {
   useEffect(() => {
@@ -98,10 +104,10 @@ export default function Home() {
               </div>
               <div className="cl med" /><div className="cl long" />
             </div>
-            <div className="card-label">Live Preview ✦</div>
+            <div className="card-label">Live Preview</div>
           </div>
-          <div className="fbadge fb1 glass">⭐ Premium Design</div>
-          <div className="fbadge fb2 glass">⚡ Fast Delivery</div>
+          <div className="fbadge fb1 glass">Premium Design</div>
+          <div className="fbadge fb2 glass">Fast Delivery</div>
         </div>
       </section>
 
@@ -111,11 +117,11 @@ export default function Home() {
           <div className="marquee-inner">
             {["Website Design","UI/UX Design","Landing Pages","E-Commerce","Brand Identity","SEO Optimization","Portfolio Sites","Mobile Responsive",
               "Website Design","UI/UX Design","Landing Pages","E-Commerce","Brand Identity","SEO Optimization","Portfolio Sites","Mobile Responsive"].map((t,i)=>(
-              <span key={i}>{i%2===0?t:<span className="sep">✦</span>}{i%2!==0?t:""}</span>
+              <span key={i}>{i%2===0?t:<span className="sep">•</span>}{i%2!==0?t:""}</span>
             ))}
-            {["Website Design","✦","UI/UX Design","✦","Landing Pages","✦","E-Commerce","✦","Brand Identity","✦","SEO Optimization","✦","Portfolio Sites","✦","Mobile Responsive","✦",
-              "Website Design","✦","UI/UX Design","✦","Landing Pages","✦","E-Commerce","✦","Brand Identity","✦","SEO Optimization","✦","Portfolio Sites","✦","Mobile Responsive","✦"].map((t,i)=>(
-              <span key={"b"+i} className={t==="✦"?"sep":undefined}>{t}</span>
+            {["Website Design","•","UI/UX Design","•","Landing Pages","•","E-Commerce","•","Brand Identity","•","SEO Optimization","•","Portfolio Sites","•","Mobile Responsive","•",
+              "Website Design","•","UI/UX Design","•","Landing Pages","•","E-Commerce","•","Brand Identity","•","SEO Optimization","•","Portfolio Sites","•","Mobile Responsive","•"].map((t,i)=>(
+              <span key={"b"+i} className={t==="•"?"sep":undefined}>{t}</span>
             ))}
           </div>
         </div>
@@ -131,10 +137,10 @@ export default function Home() {
           </div>
           <div className="services-grid">
             {[
-              { icon: "🖥️", title: "Website Design", desc: "Pixel-perfect, responsive websites that look stunning on every screen and device.", tags: ["HTML/CSS","React","Next.js"] },
-              { icon: "🎯", title: "Landing Pages", desc: "High-converting landing pages designed to turn visitors into loyal customers.", tags: ["Conversion","A/B Testing"] },
-              { icon: "🛒", title: "E-Commerce", desc: "Beautiful online stores optimized for speed, security, and maximum sales.", tags: ["Shopify","WooCommerce"] },
-              { icon: "✏️", title: "UI/UX Design", desc: "Intuitive interfaces crafted through deep research, wireframes, and stunning visuals.", tags: ["Figma","Prototyping"] },
+              { icon: <IconMonitor size={24} />, title: "Website Design", desc: "Pixel-perfect, responsive websites that look stunning on every screen and device.", tags: ["HTML/CSS","React","Next.js"] },
+              { icon: <IconTarget size={24} />, title: "Landing Pages", desc: "High-converting landing pages designed to turn visitors into loyal customers.", tags: ["Conversion","A/B Testing"] },
+              { icon: <IconShoppingBag size={24} />, title: "E-Commerce", desc: "Beautiful online stores optimized for speed, security, and maximum sales.", tags: ["Shopify","WooCommerce"] },
+              { icon: <IconFigma size={24} />, title: "UI/UX Design", desc: "Intuitive interfaces crafted through deep research, wireframes, and stunning visuals.", tags: ["Figma","Prototyping"] },
             ].map((s, i) => (
               <div key={i} className="svc-card glass reveal hover-lift">
                 <div className="svc-icon">{s.icon}</div>

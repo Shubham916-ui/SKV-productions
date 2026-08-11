@@ -1,5 +1,17 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import "./PageShared.css";
+import {
+  IconPhone,
+  IconMail,
+  IconMapPin,
+  IconClock,
+  IconInstagram,
+  IconWhatsApp,
+  IconLinkedIn,
+  IconBehance,
+  IconCheck,
+  IconSend
+} from "../components/Icons";
 
 export default function Contact() {
   const [form, setForm] = useState({ name:"", email:"", service:"", budget:"", message:"" });
@@ -28,19 +40,31 @@ export default function Contact() {
               <div className="contact-card glass">
                 <h3>Contact Details</h3>
                 <div className="contact-items">
-                  <div className="citem"><span className="citem-icon">📞</span><div><strong>Phone</strong><p>+91 98765 43210</p></div></div>
-                  <div className="citem"><span className="citem-icon">✉️</span><div><strong>Email</strong><p>hello@skvproductions.in</p></div></div>
-                  <div className="citem"><span className="citem-icon">📍</span><div><strong>Location</strong><p>India — Available Worldwide</p></div></div>
-                  <div className="citem"><span className="citem-icon">🕐</span><div><strong>Response Time</strong><p>Within 24 hours</p></div></div>
+                  <div className="citem">
+                    <span className="citem-icon"><IconPhone size={18} /></span>
+                    <div><strong>Phone</strong><p>+91 98765 43210</p></div>
+                  </div>
+                  <div className="citem">
+                    <span className="citem-icon"><IconMail size={18} /></span>
+                    <div><strong>Email</strong><p>hello@skvproductions.in</p></div>
+                  </div>
+                  <div className="citem">
+                    <span className="citem-icon"><IconMapPin size={18} /></span>
+                    <div><strong>Location</strong><p>India — Available Worldwide</p></div>
+                  </div>
+                  <div className="citem">
+                    <span className="citem-icon"><IconClock size={18} /></span>
+                    <div><strong>Response Time</strong><p>Within 24 hours</p></div>
+                  </div>
                 </div>
               </div>
               <div className="contact-card glass">
                 <h3>Follow Us</h3>
                 <div className="social-grid">
-                  <a href="#" className="social-card glass">📸 Instagram</a>
-                  <a href="#" className="social-card glass">💬 WhatsApp</a>
-                  <a href="#" className="social-card glass">💼 LinkedIn</a>
-                  <a href="#" className="social-card glass">🎨 Behance</a>
+                  <a href="#" className="social-card glass"><IconInstagram size={16} /> Instagram</a>
+                  <a href="#" className="social-card glass"><IconWhatsApp size={16} /> WhatsApp</a>
+                  <a href="#" className="social-card glass"><IconLinkedIn size={16} /> LinkedIn</a>
+                  <a href="#" className="social-card glass"><IconBehance size={16} /> Behance</a>
                 </div>
               </div>
             </div>
@@ -49,7 +73,7 @@ export default function Contact() {
               <h3>Send a Message</h3>
               {status === "done" ? (
                 <div className="form-success">
-                  <div className="success-icon">✓</div>
+                  <div className="success-icon"><IconCheck size={28} /></div>
                   <h4>Message Sent!</h4>
                   <p>Thank you for reaching out. We will get back to you within 24 hours.</p>
                   <button className="btn-ghost" onClick={()=>setStatus("idle")}>Send Another</button>
@@ -97,7 +121,7 @@ export default function Contact() {
                     <textarea rows="5" placeholder="Describe your project, goals, and any specific requirements..." value={form.message} onChange={e=>setForm({...form,message:e.target.value})} required />
                   </div>
                   <button type="submit" className="btn-primary full-w" disabled={status==="sending"}>
-                    {status==="sending" ? "Sending..." : "Send Message ✦"}
+                    {status==="sending" ? "Sending..." : <>Send Message <IconSend size={16} /></>}
                   </button>
                 </form>
               )}

@@ -1,16 +1,26 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./PageShared.css";
+import {
+  IconMonitor,
+  IconTarget,
+  IconShoppingBag,
+  IconUser,
+  IconFigma,
+  IconSmartphone,
+  IconSearch,
+  IconLayers
+} from "../components/Icons";
 
 const services = [
-  { icon: "🖥️", title: "Website Design", desc: "Pixel-perfect, responsive websites that look stunning on every screen. We blend aesthetics with functionality to build sites that impress and convert.", tags: ["HTML/CSS","React","Next.js","Vue"] },
-  { icon: "🎯", title: "Landing Pages", desc: "High-converting landing pages designed specifically to turn visitors into loyal customers. Built with proven conversion principles.", tags: ["CRO","A/B Testing","Analytics"] },
-  { icon: "🛒", title: "E-Commerce Stores", desc: "Beautiful, fast, and secure online stores that are optimized from browse to checkout to maximize your revenue.", tags: ["Shopify","WooCommerce","Custom"] },
-  { icon: "👤", title: "Portfolio Websites", desc: "Make a lasting impression with a portfolio that showcases your best work powerfully and gets you noticed.", tags: ["Personal Brand","Freelancers","Agencies"] },
-  { icon: "✏️", title: "UI/UX Design", desc: "Intuitive user interfaces crafted through research, wireframing, and stunning visual design. Figma-first workflow.", tags: ["Figma","User Research","Prototyping"] },
-  { icon: "📱", title: "Mobile-First Design", desc: "Every website we build is fully optimized for mobile, ensuring your users get the best experience on any device.", tags: ["Responsive","PWA","Performance"] },
-  { icon: "🔍", title: "SEO Optimization", desc: "We build websites that rank. Technical SEO, fast load times, and semantic HTML baked in from day one.", tags: ["Core Web Vitals","Schema","Speed"] },
-  { icon: "⚡", title: "Full Package", desc: "Design + Development + SEO + Domain + Hosting — everything handled end-to-end. You focus on growth, we handle the rest.", tags: ["Complete Solution","Best Value"] },
+  { icon: <IconMonitor size={24} />, title: "Website Design", desc: "Pixel-perfect, responsive websites that look stunning on every screen. We blend aesthetics with functionality to build sites that impress and convert.", tags: ["HTML/CSS","React","Next.js","Vue"] },
+  { icon: <IconTarget size={24} />, title: "Landing Pages", desc: "High-converting landing pages designed specifically to turn visitors into loyal customers. Built with proven conversion principles.", tags: ["CRO","A/B Testing","Analytics"] },
+  { icon: <IconShoppingBag size={24} />, title: "E-Commerce Stores", desc: "Beautiful, fast, and secure online stores that are optimized from browse to checkout to maximize your revenue.", tags: ["Shopify","WooCommerce","Custom"] },
+  { icon: <IconUser size={24} />, title: "Portfolio Websites", desc: "Make a lasting impression with a portfolio that showcases your best work powerfully and gets you noticed.", tags: ["Personal Brand","Freelancers","Agencies"] },
+  { icon: <IconFigma size={24} />, title: "UI/UX Design", desc: "Intuitive user interfaces crafted through research, wireframing, and stunning visual design. Figma-first workflow.", tags: ["Figma","User Research","Prototyping"] },
+  { icon: <IconSmartphone size={24} />, title: "Mobile-First Design", desc: "Every website we build is fully optimized for mobile, ensuring your users get the best experience on any device.", tags: ["Responsive","PWA","Performance"] },
+  { icon: <IconSearch size={24} />, title: "SEO Optimization", desc: "We build websites that rank. Technical SEO, fast load times, and semantic HTML baked in from day one.", tags: ["Core Web Vitals","Schema","Speed"] },
+  { icon: <IconLayers size={24} />, title: "Full Package", desc: "Design + Development + SEO + Domain + Hosting — everything handled end-to-end. You focus on growth, we handle the rest.", tags: ["Complete Solution","Best Value"] },
 ];
 
 export default function Services() {
@@ -40,7 +50,7 @@ export default function Services() {
           <div className="services-grid-full">
             {services.map((s, i) => (
               <div key={i} className={`svc-card-full glass reveal hover-lift${s.title === "Full Package" ? " featured" : ""}`}>
-                {s.title === "Full Package" && <div className="feat-badge">⭐ Most Popular</div>}
+                {s.title === "Full Package" && <div className="feat-badge">Most Popular</div>}
                 <div className="svc-icon-lg">{s.icon}</div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
