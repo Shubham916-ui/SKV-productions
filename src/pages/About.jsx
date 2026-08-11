@@ -5,7 +5,11 @@ import {
   IconDiamond,
   IconZap,
   IconUsers,
-  IconCompass
+  IconCompass,
+  IconGitHub,
+  IconLinkedIn,
+  IconInstagram,
+  IconBehance
 } from "../components/Icons";
 
 const values = [
@@ -13,6 +17,29 @@ const values = [
   { icon: <IconZap size={24} />, title:"Speed & Performance", desc:"Fast websites aren't optional. We optimize for Core Web Vitals and sub-2-second load times by default." },
   { icon: <IconUsers size={24} />, title:"Client-Centric", desc:"You are our priority. Clear communication, transparent pricing, and genuine care for your success." },
   { icon: <IconCompass size={24} />, title:"Future-Ready", desc:"We build with tomorrow in mind — scalable, maintainable, and ready for whatever comes next." },
+];
+
+const team = [
+  {
+    name: "Shubham",
+    role: "Founder & Lead Developer",
+    bio: "Passionate about building fast, responsive, and scalable React web applications. Focuses on clean code, performance optimization, and modern web architecture.",
+    avatar: "/team-shubham.jpg",
+    init: "S",
+    github: "https://github.com/Shubham916-ui",
+    linkedin: "https://linkedin.com",
+    instagram: "https://instagram.com"
+  },
+  {
+    name: "Co-Founder",
+    role: "UI/UX & Brand Strategist",
+    bio: "Crafts high-impact UI/UX designs, dark-mode glassmorphic layouts, and conversion-focused web visual systems.",
+    avatar: "/team-member2.jpg",
+    init: "SK",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com",
+    behance: "https://behance.net"
+  }
 ];
 
 const testimonials = [
@@ -90,6 +117,52 @@ export default function About() {
                   <div className="value-icon">{v.icon}</div>
                   <h3>{v.title}</h3>
                   <p>{v.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Team Section */}
+          <div className="about-section">
+            <div className="section-header" style={{textAlign:"center",marginBottom:"48px"}}>
+              <div className="section-label">The Minds Behind SKV</div>
+              <h2 className="section-title">Meet Our <span className="gradient-text">Team</span></h2>
+              <p className="page-subtitle" style={{margin:"12px auto 0", maxWidth:"560px"}}>We are a compact, high-impact 2-person studio blending strategy, design, and code.</p>
+            </div>
+            <div className="team-grid">
+              {team.map((m, i) => (
+                <div key={i} className="team-card glass reveal hover-lift">
+                  <div className="team-avatar-wrap">
+                    {m.avatar ? (
+                      <img src={m.avatar} alt={m.name} className="team-avatar-img" onError={(e)=>{e.target.style.display='none'; e.target.nextSibling.style.display='flex';}} />
+                    ) : null}
+                    <div className="team-avatar-fallback" style={{display: m.avatar ? 'none' : 'flex'}}>{m.init}</div>
+                  </div>
+                  <h3 className="team-name">{m.name}</h3>
+                  <span className="team-role">{m.role}</span>
+                  <p className="team-bio">{m.bio}</p>
+                  <div className="team-socials">
+                    {m.github && (
+                      <a href={m.github} target="_blank" rel="noopener noreferrer" className="team-social-btn" title="GitHub">
+                        <IconGitHub size={16} />
+                      </a>
+                    )}
+                    {m.linkedin && (
+                      <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="team-social-btn" title="LinkedIn">
+                        <IconLinkedIn size={16} />
+                      </a>
+                    )}
+                    {m.instagram && (
+                      <a href={m.instagram} target="_blank" rel="noopener noreferrer" className="team-social-btn" title="Instagram">
+                        <IconInstagram size={16} />
+                      </a>
+                    )}
+                    {m.behance && (
+                      <a href={m.behance} target="_blank" rel="noopener noreferrer" className="team-social-btn" title="Behance">
+                        <IconBehance size={16} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
