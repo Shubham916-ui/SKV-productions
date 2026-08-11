@@ -34,12 +34,6 @@ export default function Navbar() {
           <Link to="/" className="nav-logo" onClick={closeMenu}>
             <img src="/skv-logo.png" alt="SKV Logo" className="logo-img" />
             <span className="logo-v-divider" />
-            <div className="logo-text-block">
-              <span className="logo-title">SKV PRODUCTIONS</span>
-              <span className="logo-tagline">
-                BUILDING THE FUTURE
-              </span>
-            </div>
             <span className="logo-mobile-name">SKV Productions</span>
           </Link>
 
