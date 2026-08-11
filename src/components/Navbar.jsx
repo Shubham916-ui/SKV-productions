@@ -29,35 +29,34 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`navbar-wrapper${scrolled ? " scrolled" : ""}`}>
-        <nav className="nav-capsule">
+      <header className={`navbar-header${scrolled ? " scrolled" : ""}`}>
+        <div className="nav-container">
           <Link to="/" className="nav-logo" onClick={closeMenu}>
             <span className="logo-skv">SKV</span>
             <span className="logo-prod">Productions</span>
           </Link>
 
-          <ul className="nav-links">
-            {navItems.map((item) => (
-              <li key={item.to}>
-                <NavLink
-                  to={item.to}
-                  end={item.end}
-                  className={({ isActive }) =>
-                    "nav-pill" + (isActive ? " active" : "")
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <nav className="nav-capsule">
+            <ul className="nav-links">
+              {navItems.map((item) => (
+                <li key={item.to}>
+                  <NavLink
+                    to={item.to}
+                    end={item.end}
+                    className={({ isActive }) =>
+                      "nav-pill" + (isActive ? " active" : "")
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-          <div className="nav-right">
-            <span className="nav-divider" />
-            <Link to="/contact" className="nav-cta-pill" onClick={closeMenu}>
-              Start a Project
-            </Link>
-          </div>
+          <Link to="/contact" className="nav-cta-pill" onClick={closeMenu}>
+            Start a Project
+          </Link>
 
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
@@ -66,7 +65,7 @@ export default function Navbar() {
           >
             <span /><span /><span />
           </button>
-        </nav>
+        </div>
       </header>
 
       {/* Mobile Menu */}
