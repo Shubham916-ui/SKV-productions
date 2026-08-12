@@ -8,7 +8,7 @@ import {
   IconInstagram,
   IconWhatsApp,
   IconLinkedIn,
-  IconBehance,
+  IconGitHub,
   IconCheck,
   IconSend
 } from "../components/Icons";
@@ -42,11 +42,11 @@ export default function Contact() {
                 <div className="contact-items">
                   <div className="citem">
                     <span className="citem-icon"><IconPhone size={18} /></span>
-                    <div><strong>Phone</strong><p>+91 98765 43210</p></div>
+                    <div><strong>Phone / WhatsApp</strong><p><a href="tel:+918652750465" style={{ color: "inherit", textDecoration: "none" }}>+91 86527 50465</a></p></div>
                   </div>
                   <div className="citem">
                     <span className="citem-icon"><IconMail size={18} /></span>
-                    <div><strong>Email</strong><p>hello@skvproductions.in</p></div>
+                    <div><strong>Email</strong><p><a href="mailto:s.k.v.productions0@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>s.k.v.productions0@gmail.com</a></p></div>
                   </div>
                   <div className="citem">
                     <span className="citem-icon"><IconMapPin size={18} /></span>
@@ -61,10 +61,10 @@ export default function Contact() {
               <div className="contact-card glass">
                 <h3>Follow Us</h3>
                 <div className="social-grid">
-                  <a href="#" className="social-card glass"><IconInstagram size={16} /> Instagram</a>
-                  <a href="#" className="social-card glass"><IconWhatsApp size={16} /> WhatsApp</a>
-                  <a href="#" className="social-card glass"><IconLinkedIn size={16} /> LinkedIn</a>
-                  <a href="#" className="social-card glass"><IconBehance size={16} /> Behance</a>
+                  <a href="https://www.instagram.com/s.k.v.productions0/" target="_blank" rel="noopener noreferrer" className="social-card glass"><IconInstagram size={16} /> Instagram</a>
+                  <a href="https://wa.me/918652750465" target="_blank" rel="noopener noreferrer" className="social-card glass"><IconWhatsApp size={16} /> WhatsApp</a>
+                  <a href="https://www.linkedin.com/in/skv-undefined/" target="_blank" rel="noopener noreferrer" className="social-card glass"><IconLinkedIn size={16} /> LinkedIn</a>
+                  <a href="https://github.com/skvproductions0" target="_blank" rel="noopener noreferrer" className="social-card glass"><IconGitHub size={16} /> GitHub</a>
                 </div>
               </div>
             </div>

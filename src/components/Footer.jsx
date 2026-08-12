@@ -49,8 +49,8 @@ export default function Footer() {
               <div className="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                  <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-                  <li><a href="mailto:hello@skvproductions.in">hello@skvproductions.in</a></li>
+                  <li><a href="tel:+918652750465">+91 86527 50465</a></li>
+                  <li><a href="mailto:s.k.v.productions0@gmail.com">s.k.v.productions0@gmail.com</a></li>
                   <li><span>India — Worldwide</span></li>
                 </ul>
               </div>
@@ -64,16 +64,16 @@ export default function Footer() {
             © 2026 <span>SKV PRODUCTIONS</span>. ALL RIGHTS RESERVED.
           </p>
           <div className="footer-social-icons">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="GitHub">
+            <a href="https://github.com/skvproductions0" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="GitHub">
               <IconGitHub size={18} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/skv-undefined/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
               <IconLinkedIn size={18} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
+            <a href="https://www.instagram.com/s.k.v.productions0/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
               <IconInstagram size={18} />
             </a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp">
+            <a href="https://wa.me/918652750465" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp">
               <IconWhatsApp size={18} />
             </a>
           </div>
