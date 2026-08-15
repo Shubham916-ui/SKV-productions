@@ -232,23 +232,42 @@
 /* ===== TEAM SECTION ===== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .team-card {
-  padding: 40px 32px;
+  padding: 40px 28px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   border-color: rgba(255, 255, 255, 0.08) !important;
   transition: all 0.3s ease;
 }
 .team-card:hover {
   border-color: rgba(167, 139, 250, 0.3) !important;
+}
+.team-position-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  padding: 4px 14px;
+  border-radius: 100px;
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+.team-position-badge.co-founder {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.35);
+  color: var(--sky);
 }
 .team-avatar-wrap {
   position: relative;
@@ -257,7 +276,7 @@
   margin-bottom: 20px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, rgba(167,139,250,0.5), rgba(56,189,248,0.5));
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.5), rgba(56, 189, 248, 0.5));
 }
 .team-avatar-img {
   width: 100%;
@@ -276,16 +295,41 @@
   align-items: center;
   justify-content: center;
   font-family: "Outfit", sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #ffffff;
+  letter-spacing: 0.5px;
 }
 .team-name {
   font-family: "Outfit", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 6px;
   color: var(--text);
+}
+.team-designation {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: block;
+}
+.team-exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+.team-exp-badge .exp-val {
+  color: var(--green);
+  font-weight: 700;
 }
 .team-role {
   font-family: "Outfit", sans-serif;
@@ -329,6 +373,23 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .team-grid { grid-template-columns: 1fr; }
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid > .team-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid > .team-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: 100%;
+  }
 }

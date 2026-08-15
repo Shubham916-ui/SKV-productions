@@ -1,4 +1,4 @@
-﻿/* ===== REAL CLIENT PROJECT CARD ===== */
+/* ===== REAL CLIENT PROJECT CARD ===== */
 .real-project {
   border-color: rgba(249, 115, 22, 0.25) !important;
   position: relative;
@@ -46,6 +46,87 @@
 @keyframes realPulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
   50% { opacity: 0.8; box-shadow: 0 0 0 5px rgba(249,115,22,0); }
+}
+
+/* ===== IN-DEVELOPMENT / COMING SOON CARD ===== */
+.dev-project {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  position: relative;
+  overflow: hidden;
+}
+.dev-project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+.dev-project > * { position: relative; z-index: 1; }
+
+/* Coming Soon Badge — Top Right */
+.coming-soon-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 13px;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  backdrop-filter: blur(10px);
+}
+.coming-soon-dot {
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #3b82f6;
+  animation: bluePulse 2s infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+@keyframes bluePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(59, 130, 246, 0); }
+}
+
+/* Blue Overlay on In-Dev Image */
+.in-dev-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.55), rgba(15, 23, 42, 0.82));
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.in-dev-overlay-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 100px;
+  color: #93c5fd;
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Location badge on thumbnail */

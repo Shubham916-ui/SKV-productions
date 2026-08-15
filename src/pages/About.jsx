@@ -15,6 +15,33 @@ const values = [
   { icon: <IconCompass size={24} />, title: "Future-Ready", desc: "We build with tomorrow in mind — scalable, maintainable, and ready for whatever comes next." },
 ];
 
+const teamMembers = [
+  {
+    name: "Vaibhav Mani Tripathi",
+    position: "Founder",
+    designation: "Software Engineer",
+    experience: "2+ YOE",
+    init: "VMT",
+    avatar: null
+  },
+  {
+    name: "Shubham Vishwakarma",
+    position: "Founder",
+    designation: "Software Engineer",
+    experience: "2.5+ YOE",
+    init: "SV",
+    avatar: null
+  },
+  {
+    name: "Prashant Srivastav",
+    position: "Co-Founder",
+    designation: "Software Engineer",
+    experience: "2+ YOE",
+    init: "PS",
+    avatar: null
+  }
+];
+
 const testimonials = [
   {
     name: "Harsh",
@@ -65,11 +92,11 @@ export default function About() {
               <div className="section-label">Our Story</div>
               <h2 className="section-title" style={{ textAlign: "left" }}>Born from a <span className="gradient-text">Passion</span> for Design</h2>
               <p>SKV Productions was founded with a simple belief — every business deserves a website that truly represents its value. Too many great brands are held back by outdated, slow, or generic websites.</p>
-              <p>We started as a small team with big ambitions. Today, we've helped 50+ businesses across India and worldwide elevate their digital presence and achieve real, measurable results.</p>
+              <p>We started as a small team with big ambitions. Today, we've helped 15+ businesses across India and worldwide elevate their digital presence and achieve real, measurable results.</p>
               <p>Our approach combines strategic thinking with beautiful execution — we don't just make pretty websites, we build digital tools that drive business growth.</p>
             </div>
             <div className="story-stats">
-              {[["50+", "Projects Completed"], ["30+", "Happy Clients"], ["3+", "Years of Excellence"], ["100%", "Client Satisfaction"]].map(([n, l]) => (
+              {[["15+", "Projects Completed"], ["10+", "Happy Clients"], ["1.5+", "Years of Excellence"], ["100%", "Client Satisfaction"]].map(([n, l]) => (
                 <div key={l} className="story-stat glass">
                   <span className="story-num gradient-text">{n}</span>
                   <p>{l}</p>
@@ -90,6 +117,36 @@ export default function About() {
                   <div className="value-icon">{v.icon}</div>
                   <h3>{v.title}</h3>
                   <p>{v.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Team Section */}
+          <div className="about-section" id="team">
+            <div className="section-header" style={{ textAlign: "center", marginBottom: "48px" }}>
+              <div className="section-label">Our Team</div>
+              <h2 className="section-title">Meet the <span className="gradient-text">Founders & Team</span></h2>
+            </div>
+            <div className="team-grid">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="team-card glass reveal hover-lift">
+                  <span className={`team-position-badge ${member.position === "Co-Founder" ? "co-founder" : ""}`}>
+                    {member.position}
+                  </span>
+                  <div className="team-avatar-wrap">
+                    {member.avatar ? (
+                      <img src={member.avatar} alt={member.name} className="team-avatar-img" />
+                    ) : (
+                      <div className="team-avatar-fallback">{member.init}</div>
+                    )}
+                  </div>
+                  <h3 className="team-name">{member.name}</h3>
+                  <span className="team-designation">{member.designation}</span>
+                  <div className="team-exp-badge">
+                    <span>Experience:</span>
+                    <span className="exp-val">{member.experience}</span>
+                  </div>
                 </div>
               ))}
             </div>

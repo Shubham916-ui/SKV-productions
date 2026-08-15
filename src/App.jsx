@@ -1,4 +1,4 @@
-﻿import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -58,6 +58,8 @@ export default function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/process" element={<Process />} />
         <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Navigate to="/about" replace />} />
+        <Route path="/our-team" element={<Navigate to="/about" replace />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

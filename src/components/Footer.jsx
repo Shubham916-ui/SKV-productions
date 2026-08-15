@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
 import {
-  IconGitHub,
-  IconLinkedIn,
   IconInstagram,
   IconWhatsApp
 } from "./Icons";
@@ -49,9 +47,9 @@ export default function Footer() {
               <div className="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                  <li><a href="tel:+918652750465">+91 86527 50465</a></li>
+                  <li><a href="tel:+919369104234">+91 93691 04234</a></li>
                   <li><a href="mailto:s.k.v.productions0@gmail.com">s.k.v.productions0@gmail.com</a></li>
-                  <li><span>India — Worldwide</span></li>
+                  <li><span>C119/861, Hazaripur, Gorakhpur, UP 273001</span></li>
                 </ul>
               </div>
             </div>
@@ -64,16 +62,10 @@ export default function Footer() {
             © 2026 <span>SKV PRODUCTIONS</span>. ALL RIGHTS RESERVED.
           </p>
           <div className="footer-social-icons">
-            <a href="https://github.com/skvproductions0" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="GitHub">
-              <IconGitHub size={18} />
-            </a>
-            <a href="https://www.linkedin.com/in/skv-undefined/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
-              <IconLinkedIn size={18} />
-            </a>
             <a href="https://www.instagram.com/s.k.v.productions0/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
               <IconInstagram size={18} />
             </a>
-            <a href="https://wa.me/918652750465" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp">
+            <a href="https://wa.me/919369104234?text=Hi%20SKV%20Productions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp">
               <IconWhatsApp size={18} />
             </a>
           </div>
