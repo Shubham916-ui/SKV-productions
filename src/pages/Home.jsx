@@ -431,65 +431,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="home-testimonials" style={{ padding: "0 0 100px" }}>
-        <div className="container">
-          <div className="section-header">
-            <div className="section-label">Client Feedback</div>
-            <h2 className="section-title">
-              What Our Clients <span className="gradient-text">Say</span>
-            </h2>
-            <p className="section-desc">
-              Real stories from the brands and creators we've built for.
-            </p>
-          </div>
-          <div className="testi-grid">
-            {[
-              {
-                name: "Harsh",
-                role: "Cinematographer & Video Editor",
-                init: "H",
-                avatar: "/harsh.png",
-                text: "SKV Productions built my portfolio website from scratch. The sleek dark aesthetic and smooth interactive touches captured my creative style perfectly!"
-              },
-              {
-                name: "Mayank Aggrawal (CA)",
-                role: "Director, Shree Shyam Polymers Pvt. Ltd.",
-                init: "MA",
-                avatar: "/mayank.png",
-                text: "SKV Productions delivered an outstanding corporate website for Shree Shyam Polymers. Product showcase, inquiry workflow, and performance exceeded our expectations!"
-              },
-              {
-                name: "Rahul Kapoor",
-                role: "CEO, TechBridge Pvt Ltd",
-                init: "RK",
-                text: "SKV Productions completely transformed our online presence. Our conversion rate and client inquiries went up significantly after launching the new site!"
-              }
-            ].map((t, i) => (
-              <div key={i} className="testi-card glass reveal hover-lift">
-                <div className="stars">5.0 / 5.0 Rating</div>
-                <p className="testi-text">"{t.text}"</p>
-                <div className="testi-client">
-                  {t.avatar ? (
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      className="testi-avatar-img"
-                    />
-                  ) : (
-                    <div className="testi-avatar">{t.init}</div>
-                  )}
-                  <div>
-                    <strong>{t.name}</strong>
-                    <span>{t.role}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Banner */}
       <section className="cta-banner">
         <div className="container">
