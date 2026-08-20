@@ -62,7 +62,7 @@ export default function Footer() {
             © 2026 <span>SKV PRODUCTIONS</span>. ALL RIGHTS RESERVED.
           </p>
           <div className="footer-social-icons">
-            <a href="https://www.instagram.com/s.k.v.productions0/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
+            <a href="https://www.instagram.com/skvproductions0/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
               <IconInstagram size={18} />
             </a>
             <a href="https://wa.me/919369104234?text=Hi%20SKV%20Productions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp">
