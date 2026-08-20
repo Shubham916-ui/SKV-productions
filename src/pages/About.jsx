@@ -30,8 +30,7 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2.5+ YOE",
     init: "SV",
-    avatar: "/shubham.jpg",
-    imgStyle: { objectPosition: "center 10%", transform: "scale(1.18)" }
+    avatar: "/shubham.jpg"
   },
   {
     name: "Prashant Srivastav",
