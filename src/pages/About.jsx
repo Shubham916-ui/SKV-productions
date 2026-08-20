@@ -22,7 +22,7 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2+ YOE",
     init: "VMT",
-    avatar: null
+    avatar: "/Vaibhav (2).jpg"
   },
   {
     name: "Shubham Vishwakarma",
@@ -38,7 +38,7 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2+ YOE",
     init: "PS",
-    avatar: null
+    avatar: "/Prashant.jpg"
   }
 ];
 
@@ -136,7 +136,7 @@ export default function About() {
                   </span>
                   <div className="team-avatar-wrap">
                     {member.avatar ? (
-                      <img src={member.avatar} alt={member.name} className="team-avatar-img" />
+                      <img src={member.avatar} alt={member.name} className="team-avatar-img" style={member.imgStyle || {}} />
                     ) : (
                       <div className="team-avatar-fallback">{member.init}</div>
                     )}
