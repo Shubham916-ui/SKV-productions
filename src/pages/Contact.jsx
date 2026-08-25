@@ -149,7 +149,7 @@ export default function Contact() {
                 <h3>Follow Us</h3>
                 <div className="social-grid">
                   <a
-                    href="https://www.instagram.com/s.k.v.productions0/"
+                    href="https://www.instagram.com/skvproductions0/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-card glass"
