@@ -188,8 +188,8 @@ export default function Home() {
           </div>
           <h1 className="hero-title">
             <span className="line l1">We Design & Build</span>
-            <span className="line l2 gradient-text">Digital Products That</span>
-            <span className="line l3">Actually <em>Convert.</em></span>
+            <span className="line l2 gradient-text">Digital Products</span>
+            <span className="line l3">That Actually <em>Convert.</em></span>
           </h1>
           <p className="hero-desc">
             SKV Productions crafts premium websites, web apps, mobile apps, and custom software — fast, modern, and visually stunning digital solutions for your business.

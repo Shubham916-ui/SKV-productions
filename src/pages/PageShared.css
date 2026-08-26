@@ -245,10 +245,16 @@
   align-items: center;
   border-radius: var(--radius);
   border-color: rgba(255, 255, 255, 0.08) !important;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-card:hover {
-  border-color: rgba(167, 139, 250, 0.3) !important;
+  border-color: rgba(167, 139, 250, 0.35) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(167, 139, 250, 0.12);
 }
 .team-position-badge {
   display: inline-block;

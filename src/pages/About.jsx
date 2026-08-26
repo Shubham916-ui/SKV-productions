@@ -22,7 +22,8 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2+ YOE",
     init: "VMT",
-    avatar: "/Vaibhav (2).jpg"
+    avatar: "/Vaibhav (2).jpg",
+    linkedin: "https://www.linkedin.com/in/vaibhav-mani-tripathi-bb201124b/"
   },
   {
     name: "Shubham Vishwakarma",
@@ -30,7 +31,8 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2.5+ YOE",
     init: "SV",
-    avatar: "/shubham.jpg"
+    avatar: "/shubham.jpg",
+    linkedin: "https://www.linkedin.com/in/shubhamvishwakarma17/"
   },
   {
     name: "Prashant Srivastav",
@@ -38,7 +40,8 @@ const teamMembers = [
     designation: "Software Engineer",
     experience: "2+ YOE",
     init: "PS",
-    avatar: "/Prashant.jpg"
+    avatar: "/Prashant.jpg",
+    linkedin: "https://www.linkedin.com/in/prashantsrivastava18/"
   }
 ];
 
@@ -130,7 +133,14 @@ export default function About() {
             </div>
             <div className="team-grid">
               {teamMembers.map((member, index) => (
-                <div key={index} className="team-card glass reveal hover-lift">
+                <a
+                  key={index}
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="team-card glass reveal hover-lift"
+                  title={`View ${member.name}'s LinkedIn Profile`}
+                >
                   <span className={`team-position-badge ${member.position === "Co-Founder" ? "co-founder" : ""}`}>
                     {member.position}
                   </span>
@@ -147,7 +157,7 @@ export default function About() {
                     <span>Experience:</span>
                     <span className="exp-val">{member.experience}</span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
