@@ -136,14 +136,6 @@ const featuredServices = [
 
 const featuredProjects = [
   {
-    title: "EduNexus — Gamified Learning Quest",
-    type: "EdTech",
-    desc: "Interactive gamified learning platform with boss quizzes, XP progression, and Math Duels.",
-    image: "/edunexus.png",
-    liveUrl: "https://edu-nexus-v2-frontend-5zzz.vercel.app/",
-    location: "India",
-  },
-  {
     title: "Shree Shyam Polymers",
     type: "Web Apps",
     desc: "Full corporate website & product showcase for Nepal's leading plastic manufacturer.",
@@ -152,12 +144,20 @@ const featuredProjects = [
     location: "Nepal",
   },
   {
-    title: "Harsh — Cinematographer",
-    type: "Portfolio",
-    desc: "Sleek dark-mode portfolio for a professional cinematographer & video editor.",
-    image: "/harsh_portfolio.png",
-    liveUrl: "https://harsh-portfolio-seven-hazel.vercel.app/",
-    location: "Chandigarh, India",
+    title: "Six Sigma Engineers",
+    type: "Engineering / Web Apps",
+    desc: "Professional corporate website for Six Sigma Engineers showcasing HVAC and engineering services.",
+    image: "/SSE_image.png",
+    liveUrl: "https://six-sigma-engineers.vercel.app/",
+    location: "Lucknow, India",
+  },
+  {
+    title: "EduNexus — Gamified Learning Quest",
+    type: "EdTech",
+    desc: "Interactive gamified learning platform with boss quizzes, XP progression, and Math Duels.",
+    image: "/edunexus.png",
+    liveUrl: "https://edu-nexus-v2-frontend-5zzz.vercel.app/",
+    location: "India",
   },
 ];
 
