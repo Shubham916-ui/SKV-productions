@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import "./PageShared.css";
 import {
   IconPhone,
@@ -16,6 +17,7 @@ const ACCESS_KEY =
   "449d1562-b5f3-49a3-8922-cb68c4f25776";
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,6 +25,31 @@ export default function Contact() {
     budget: "",
     message: ""
   });
+
+  useEffect(() => {
+    const planParam = searchParams.get("plan");
+    if (planParam) {
+      let budgetVal = "Let us discuss";
+      if (planParam.includes("Basic Website") || planParam.includes("4,999")) {
+        budgetVal = "Under ₹15,000";
+      } else if (planParam.includes("Basic Business Software") || planParam.includes("8,999")) {
+        budgetVal = "Under ₹15,000";
+      } else if (planParam.includes("Combo") || planParam.includes("11,999")) {
+        budgetVal = "Under ₹15,000";
+      } else if (planParam.includes("Android App") || planParam.includes("24,999")) {
+        budgetVal = "₹15,000 – ₹30,000";
+      } else if (planParam.includes("Custom") || planParam.includes("49,999")) {
+        budgetVal = "₹30,000 – ₹60,000";
+      }
+
+      setForm((prev) => ({
+        ...prev,
+        service: planParam,
+        budget: prev.budget || budgetVal,
+        message: prev.message || `Hi, I am interested in getting started with the ${planParam} plan. Please share the next steps.`
+      }));
+    }
+  }, [searchParams]);
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -239,14 +266,26 @@ export default function Contact() {
                           setForm({ ...form, service: e.target.value })
                         }
                       >
-                        <option value="">Select a service...</option>
-                        <option>Website Design</option>
-                        <option>Landing Page</option>
-                        <option>E-Commerce Store</option>
-                        <option>Portfolio Website</option>
-                        <option>UI/UX Design</option>
-                        <option>Full Package</option>
-                        <option>Other</option>
+                        <option value="">Select a service / plan...</option>
+                        <optgroup label="Fixed Pricing Plans">
+                          <option value="Basic Website">Basic Website (₹4,999)</option>
+                          <option value="Basic Business Software">Basic Business Software (Starting ₹8,999)</option>
+                          <option value="Website + Software Combo">Website + Software Combo (₹11,999)</option>
+                          <option value="Android App + Play Store">Android App + Play Store (₹24,999)</option>
+                          <option value="Custom Android + iOS App">Custom Android + iOS App (Starting ₹49,999)</option>
+                        </optgroup>
+                        <optgroup label="Custom Services">
+                          <option value="Website Design">Website Design</option>
+                          <option value="Web Application Development">Web Application Development</option>
+                          <option value="Mobile App Development">Mobile App Development</option>
+                          <option value="Desktop Application Development">Desktop Application Development</option>
+                          <option value="Custom Software Development">Custom Software Development</option>
+                          <option value="Landing Page">Landing Page</option>
+                          <option value="E-Commerce Store">E-Commerce Store</option>
+                          <option value="Portfolio Website">Portfolio Website</option>
+                          <option value="UI/UX Design">UI/UX Design</option>
+                          <option value="Other">Other</option>
+                        </optgroup>
                       </select>
                     </div>
                     <div className="fgroup">

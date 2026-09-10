@@ -5,6 +5,7 @@ import "./Navbar.css";
 const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
+  { to: "/pricing", label: "Pricing" },
   { to: "/work", label: "Work" },
   { to: "/process", label: "Process" },
   { to: "/about", label: "About" },

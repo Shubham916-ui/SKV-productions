@@ -156,13 +156,18 @@ export default function Services() {
             ))}
           </div>
           <div className="page-cta glass reveal">
-            <h3>Not sure which service you need?</h3>
+            <h3>Not sure which service you need or looking for fixed packages?</h3>
             <p>
-              Let us understand your goals and recommend the best solution for your business.
+              Explore our transparent 1-year plans starting at ₹4,999 or let us customize a bespoke solution for you.
             </p>
-            <Link to="/contact" className="btn-primary">
-              Talk to Us →
-            </Link>
+            <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", marginTop: "16px" }}>
+              <Link to="/pricing" className="btn-primary">
+                View Pricing Plans →
+              </Link>
+              <Link to="/contact" className="btn-ghost">
+                Talk to Us →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

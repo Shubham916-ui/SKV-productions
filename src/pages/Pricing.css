@@ -1,0 +1,217 @@
+/* ===== PRICING PAGE SPECIFIC STYLES ===== */
+
+.pricing-perks-section {
+  padding: 40px 0 80px;
+}
+
+.pricing-perks-card {
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(14, 14, 22, 0.6);
+  border: 1px solid var(--glass-border);
+}
+
+.perks-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.perks-header h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.perks-header p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.perk-check {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.perk-item strong {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.perk-item p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* FAQ Section */
+.pricing-faq-section {
+  padding: 40px 0 120px;
+}
+
+.faq-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.faq-title {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(28px, 3.8vw, 44px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.faq-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.faq-accordion {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  padding: 22px 28px;
+  border-radius: 16px;
+  cursor: pointer;
+  background: rgba(14, 14, 22, 0.5);
+  border: 1px solid var(--glass-border);
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  background: rgba(20, 20, 32, 0.7);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.faq-item.open {
+  background: rgba(20, 20, 32, 0.9);
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question h4 {
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.faq-chevron {
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+  color: var(--purple);
+}
+
+.faq-answer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #c4c4d4;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* FAQ Support Box */
+.faq-support-box {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 38px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+.faq-support-box h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.faq-support-box p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.faq-support-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pricing-perks-card {
+    padding: 30px 20px;
+  }
+  .faq-item {
+    padding: 18px 20px;
+  }
+  .faq-support-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 20px;
+  }
+  .faq-support-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

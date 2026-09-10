@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import PricingSection from "../components/PricingSection";
 import "./Home.css";
 import {
   IconMonitor,
@@ -430,6 +431,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection showHeader={true} />
 
       {/* CTA Banner */}
       <section className="cta-banner">
