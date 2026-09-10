@@ -29,23 +29,32 @@ export default function Contact() {
   useEffect(() => {
     const planParam = searchParams.get("plan");
     if (planParam) {
-      let budgetVal = "Let us discuss";
+      let budgetVal = "";
+      let serviceVal = "";
+
       if (planParam.includes("Basic Website") || planParam.includes("4,999")) {
-        budgetVal = "Under ₹15,000";
+        budgetVal = "Basic Website (₹4,999)";
+        serviceVal = "Website Design";
       } else if (planParam.includes("Basic Business Software") || planParam.includes("8,999")) {
-        budgetVal = "Under ₹15,000";
+        budgetVal = "Basic Business Software (Starting ₹8,999)";
+        serviceVal = "Custom Software Development";
       } else if (planParam.includes("Combo") || planParam.includes("11,999")) {
-        budgetVal = "Under ₹15,000";
+        budgetVal = "Website + Software Combo (₹11,999)";
+        serviceVal = "Full Package";
       } else if (planParam.includes("Android App") || planParam.includes("24,999")) {
-        budgetVal = "₹15,000 – ₹30,000";
+        budgetVal = "Android App + Play Store (₹24,999)";
+        serviceVal = "Mobile App Development";
       } else if (planParam.includes("Custom") || planParam.includes("49,999")) {
-        budgetVal = "₹30,000 – ₹60,000";
+        budgetVal = "Custom Android + iOS App (Starting ₹49,999)";
+        serviceVal = "Mobile App Development";
+      } else {
+        budgetVal = planParam;
       }
 
       setForm((prev) => ({
         ...prev,
-        service: planParam,
-        budget: prev.budget || budgetVal,
+        service: prev.service || serviceVal,
+        budget: budgetVal,
         message: prev.message || `Hi, I am interested in getting started with the ${planParam} plan. Please share the next steps.`
       }));
     }
@@ -266,42 +275,35 @@ export default function Contact() {
                           setForm({ ...form, service: e.target.value })
                         }
                       >
-                        <option value="">Select a service / plan...</option>
-                        <optgroup label="Fixed Pricing Plans">
-                          <option value="Basic Website">Basic Website (₹4,999)</option>
-                          <option value="Basic Business Software">Basic Business Software (Starting ₹8,999)</option>
-                          <option value="Website + Software Combo">Website + Software Combo (₹11,999)</option>
-                          <option value="Android App + Play Store">Android App + Play Store (₹24,999)</option>
-                          <option value="Custom Android + iOS App">Custom Android + iOS App (Starting ₹49,999)</option>
-                        </optgroup>
-                        <optgroup label="Custom Services">
-                          <option value="Website Design">Website Design</option>
-                          <option value="Web Application Development">Web Application Development</option>
-                          <option value="Mobile App Development">Mobile App Development</option>
-                          <option value="Desktop Application Development">Desktop Application Development</option>
-                          <option value="Custom Software Development">Custom Software Development</option>
-                          <option value="Landing Page">Landing Page</option>
-                          <option value="E-Commerce Store">E-Commerce Store</option>
-                          <option value="Portfolio Website">Portfolio Website</option>
-                          <option value="UI/UX Design">UI/UX Design</option>
-                          <option value="Other">Other</option>
-                        </optgroup>
+                        <option value="">Select a service...</option>
+                        <option value="Website Design">Website Design</option>
+                        <option value="Web Application Development">Web Application Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Desktop Application Development">Desktop Application Development</option>
+                        <option value="Custom Software Development">Custom Software Development</option>
+                        <option value="Landing Page">Landing Page</option>
+                        <option value="E-Commerce Store">E-Commerce Store</option>
+                        <option value="Portfolio Website">Portfolio Website</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Full Package">Full Package</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                     <div className="fgroup">
-                      <label>Budget Range</label>
+                      <label>Plan / Package</label>
                       <select
                         value={form.budget}
                         onChange={(e) =>
                           setForm({ ...form, budget: e.target.value })
                         }
                       >
-                        <option value="">Select budget...</option>
-                        <option>Under ₹15,000</option>
-                        <option>₹15,000 – ₹30,000</option>
-                        <option>₹30,000 – ₹60,000</option>
-                        <option>₹60,000+</option>
-                        <option>Let us discuss</option>
+                        <option value="">Select a plan / package...</option>
+                        <option value="Basic Website (₹4,999)">Basic Website (₹4,999)</option>
+                        <option value="Basic Business Software (Starting ₹8,999)">Basic Business Software (Starting ₹8,999)</option>
+                        <option value="Website + Software Combo (₹11,999)">Website + Software Combo (₹11,999)</option>
+                        <option value="Android App + Play Store (₹24,999)">Android App + Play Store (₹24,999)</option>
+                        <option value="Custom Android + iOS App (Starting ₹49,999)">Custom Android + iOS App (Starting ₹49,999)</option>
+                        <option value="Custom / Other">Custom / Other</option>
                       </select>
                     </div>
                   </div>
