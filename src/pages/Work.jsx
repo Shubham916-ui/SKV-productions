@@ -5,19 +5,6 @@ import "./Work.css";
 import { IconMapPin } from "../components/Icons";
 
 const projects = [
-  {
-    id: 1,
-    title: "EduNexus — Gamified Learning Quest",
-    type: "EdTech",
-    desc: "Interactive gamified learning platform transforming Class 6–10 school curriculum into legendary quests. Features expert lessons, timed boss quizzes, XP progression system, and real-time Math Duel battles.",
-    tags: ["React", "Vite", "Gamification", "EdTech", "Web App"],
-    color: "rgba(147,51,234,0.2)",
-    accentColor: "#a855f7",
-    liveUrl: "https://edu-nexus-v2-frontend-5zzz.vercel.app/",
-    isReal: true,
-    location: "India",
-    image: "/edunexus.png",
-  },
 
   {
     id: 0,
@@ -31,6 +18,40 @@ const projects = [
     isReal: true,
     location: "Nepal",
     image: "/shyampoly.png",
+  },
+
+  {
+    id: 11,
+    title: "Six Sigma Engineers",
+    type: "Web Apps",
+    desc: "Professional corporate website for Six Sigma Engineers showcasing their HVAC and engineering services with a modern digital presence and responsive user experience.",
+    tags: [
+      "React",
+      "Vite",
+      "Engineering",
+      "Corporate Website",
+      "Responsive Design",
+    ],
+    color: "rgba(59,130,246,0.2)",
+    accentColor: "#3b82f6",
+    liveUrl: "https://six-sigma-engineers.vercel.app/",
+    isReal: true,
+    location: "Lucknow, India",
+    image: "/SSE_image.png",
+  },
+
+  {
+    id: 1,
+    title: "EduNexus — Gamified Learning Quest",
+    type: "EdTech",
+    desc: "Interactive gamified learning platform transforming Class 6–10 school curriculum into legendary quests. Features expert lessons, timed boss quizzes, XP progression system, and real-time Math Duel battles.",
+    tags: ["React", "Vite", "Gamification", "EdTech", "Web App"],
+    color: "rgba(147,51,234,0.2)",
+    accentColor: "#a855f7",
+    liveUrl: "https://edu-nexus-v2-frontend-5zzz.vercel.app/",
+    isReal: true,
+    location: "India",
+    image: "/edunexus.png",
   },
 
   {
@@ -90,27 +111,6 @@ const projects = [
   },
 
   /* In Development / Working Stage Projects */
-  {
-    id: 11,
-    title: "Six Sigma Engineers",
-    type: "Web Apps",
-    status: "in-development",
-    desc: "Professional corporate website for Six Sigma Engineers showcasing their HVAC and engineering services with a modern digital presence and responsive user experience.",
-    tags: [
-      "React",
-      "Vite",
-      "Engineering",
-      "Corporate Website",
-      "Responsive Design",
-    ],
-    color: "rgba(59,130,246,0.2)",
-    accentColor: "#3b82f6",
-    // liveUrl: "https://six-sigma-engineers.vercel.app/",
-    isReal: false,
-    location: "Lucknow, India",
-    image: "/SSE_image.png",
-  },
-
   {
     id: 12,
     title: "FixHub",
