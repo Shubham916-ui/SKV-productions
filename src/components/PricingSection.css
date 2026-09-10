@@ -72,6 +72,12 @@
   box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
 }
 
+.pricing-page-tabs-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
 /* Pricing Grid */
 .pricing-grid {
   display: grid;
@@ -89,6 +95,7 @@
 
 /* Pricing Card Base */
 .pricing-card {
+  opacity: 1 !important;
   padding: 38px 30px;
   display: flex;
   flex-direction: column;
@@ -96,7 +103,7 @@
   background: rgba(14, 14, 20, 0.65);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
   overflow: hidden;
 }
 

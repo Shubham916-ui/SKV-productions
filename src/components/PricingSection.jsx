@@ -139,7 +139,7 @@ const pricingPlans = [
   }
 ];
 
-export default function PricingSection({ showHeader = true, isPage = false }) {
+export default function PricingSection({ showHeader = true, showTabs = true, isPage = false }) {
   const [filter, setFilter] = useState("all");
 
   const filteredPlans = pricingPlans.filter((plan) => {
@@ -150,11 +150,40 @@ export default function PricingSection({ showHeader = true, isPage = false }) {
     return true;
   });
 
+  const renderTabs = () => (
+    <div className="pricing-tabs">
+      <button
+        className={`pricing-tab-btn ${filter === "all" ? "active" : ""}`}
+        onClick={() => setFilter("all")}
+      >
+        All Packages ({pricingPlans.length})
+      </button>
+      <button
+        className={`pricing-tab-btn ${filter === "web" ? "active" : ""}`}
+        onClick={() => setFilter("web")}
+      >
+        Web & Combo
+      </button>
+      <button
+        className={`pricing-tab-btn ${filter === "software" ? "active" : ""}`}
+        onClick={() => setFilter("software")}
+      >
+        Business Software
+      </button>
+      <button
+        className={`pricing-tab-btn ${filter === "mobile" ? "active" : ""}`}
+        onClick={() => setFilter("mobile")}
+      >
+        Mobile Apps (Android & iOS)
+      </button>
+    </div>
+  );
+
   return (
     <section className={`pricing-section ${isPage ? "pricing-page-mode" : ""}`} id="pricing">
       <div className="container">
-        {showHeader && (
-          <div className="pricing-header-block reveal">
+        {showHeader ? (
+          <div className="pricing-header-block">
             <div className="section-label">
               <IconSparkles size={14} /> Transparent Pricing
             </div>
@@ -165,35 +194,14 @@ export default function PricingSection({ showHeader = true, isPage = false }) {
               Transparent, all-inclusive packages engineered to scale your digital presence.
               Every plan comes backed with 1-Year free hosting, domain, or AMC support.
             </p>
-
-            {/* Filter Tabs */}
-            <div className="pricing-tabs">
-              <button
-                className={`pricing-tab-btn ${filter === "all" ? "active" : ""}`}
-                onClick={() => setFilter("all")}
-              >
-                All Packages ({pricingPlans.length})
-              </button>
-              <button
-                className={`pricing-tab-btn ${filter === "web" ? "active" : ""}`}
-                onClick={() => setFilter("web")}
-              >
-                Web & Combo
-              </button>
-              <button
-                className={`pricing-tab-btn ${filter === "software" ? "active" : ""}`}
-                onClick={() => setFilter("software")}
-              >
-                Business Software
-              </button>
-              <button
-                className={`pricing-tab-btn ${filter === "mobile" ? "active" : ""}`}
-                onClick={() => setFilter("mobile")}
-              >
-                Mobile Apps (Android & iOS)
-              </button>
-            </div>
+            {showTabs && renderTabs()}
           </div>
+        ) : (
+          showTabs && (
+            <div className="pricing-page-tabs-wrap">
+              {renderTabs()}
+            </div>
+          )
         )}
 
         {/* Pricing Cards Grid */}
@@ -201,7 +209,7 @@ export default function PricingSection({ showHeader = true, isPage = false }) {
           {filteredPlans.map((plan) => (
             <div
               key={plan.id}
-              className={`pricing-card glass reveal hover-lift ${plan.featured ? "featured-plan" : ""}`}
+              className={`pricing-card glass hover-lift ${plan.featured ? "featured-plan" : ""}`}
             >
               {plan.featured && (
                 <div className="featured-banner">
@@ -295,7 +303,7 @@ export default function PricingSection({ showHeader = true, isPage = false }) {
         </div>
 
         {/* Value Trust Banner */}
-        <div className="pricing-trust-banner glass reveal">
+        <div className="pricing-trust-banner glass">
           <div className="trust-item">
             <div className="trust-icon-box">
               <IconShield size={22} />
@@ -326,7 +334,7 @@ export default function PricingSection({ showHeader = true, isPage = false }) {
         </div>
 
         {/* Bottom Contact Help */}
-        <div className="pricing-custom-inquiry glass reveal">
+        <div className="pricing-custom-inquiry glass">
           <div className="inquiry-content">
             <h3>Need a tailor-made plan or enterprise solution?</h3>
             <p>

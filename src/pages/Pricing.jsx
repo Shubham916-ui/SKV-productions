@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import PricingSection from "../components/PricingSection";
 import "./PageShared.css";
@@ -40,22 +40,6 @@ const faqs = [
 export default function Pricing() {
   const [openFaq, setOpenFaq] = useState(null);
 
-  useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
-    const obs = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e, i) => {
-          if (e.isIntersecting) {
-            setTimeout(() => e.target.classList.add("visible"), i * 60);
-            obs.unobserve(e.target);
-          }
-        }),
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
-
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
@@ -63,7 +47,7 @@ export default function Pricing() {
   return (
     <div className="page-wrapper">
       {/* Page Hero */}
-      <div className="page-hero">
+      <div className="page-hero pricing-page-hero">
         <div className="container">
           <div className="section-label">
             <IconSparkles size={14} /> Pricing & Packages
@@ -84,7 +68,7 @@ export default function Pricing() {
       {/* Feature Comparison Highlights */}
       <section className="pricing-perks-section">
         <div className="container">
-          <div className="pricing-perks-card glass reveal">
+          <div className="pricing-perks-card glass">
             <div className="perks-header">
               <h3>All Plans Include Our Core Standards</h3>
               <p>Regardless of which plan you choose, SKV Productions guarantees:</p>
@@ -140,7 +124,7 @@ export default function Pricing() {
       {/* Frequently Asked Questions */}
       <section className="pricing-faq-section">
         <div className="container">
-          <div className="faq-header reveal">
+          <div className="faq-header">
             <div className="section-label">Common Questions</div>
             <h2 className="faq-title">
               Frequently Asked <span className="gradient-text">Questions</span>
@@ -150,7 +134,7 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="faq-accordion reveal">
+          <div className="faq-accordion">
             {faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
@@ -175,7 +159,7 @@ export default function Pricing() {
             })}
           </div>
 
-          <div className="faq-support-box glass reveal">
+          <div className="faq-support-box glass">
             <div>
               <h3>Still have questions?</h3>
               <p>We are here to help. Reach out directly and we will answer any queries within hours.</p>

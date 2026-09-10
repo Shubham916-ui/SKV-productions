@@ -1,5 +1,19 @@
 /* ===== PRICING PAGE SPECIFIC STYLES ===== */
 
+.pricing-page-hero {
+  padding: 130px 0 32px !important;
+}
+
+.pricing-page-hero .page-title {
+  font-size: clamp(30px, 4vw, 54px);
+  margin-bottom: 12px;
+}
+
+.pricing-page-hero .page-subtitle {
+  font-size: 16px;
+  max-width: 600px;
+}
+
 .pricing-perks-section {
   padding: 40px 0 80px;
 }
